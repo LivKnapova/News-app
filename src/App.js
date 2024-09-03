@@ -18,8 +18,6 @@ function App() {
 
   const fetchNews = async () => {
     const response = await fetch(
-      //`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=00581d6a586e45e69f64bf1f4c02a970`
-      //`https://newsdata.io/api/1/latest?apikey=pub_52059255838ecb7c20d23c2f7f961ead44cb0&category=${category}&country=cz`
       `https://api.thenewsapi.com/v1/news/top?api_token=${apiKey}&locale=${local}&limit=3&categories=${category}`
     )
     const data = await response.json();
