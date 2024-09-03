@@ -14,8 +14,7 @@ function App() {
 
   const apiKey = process.env.REACT_APP_API_KEY;
 
-  useEffect(() => {fetchNews();}, [local, category])
-
+  useEffect(() => {
   const fetchNews = async () => {
     const response = await fetch(
       `https://api.thenewsapi.com/v1/news/top?api_token=${apiKey}&locale=${local}&limit=3&categories=${category}`
@@ -25,6 +24,8 @@ function App() {
     console.log(data);
     setItems(data.data);
   };
+  fetchNews();
+  }, [local, category]);
 
   return (
     <div className="App">
