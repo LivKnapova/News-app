@@ -12,13 +12,13 @@ function NewsItem({ item }) {
   return (
     <a href={item.url} className="article">
       <div className="article-image">
-        <img src={item.image_url} atl={item.title} />
+        <img src={item.image_url} atl="news-photo" />
       </div>
       <div className="article-content">
         <div className="article-source">
           <img
             src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${website}&size=16`}
-            atl={item.source}
+            atl="source-logo"
           />
           <span>{item.source}</span>
         </div>
