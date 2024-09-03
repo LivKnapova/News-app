@@ -12,10 +12,9 @@ function App() {
   const [category, setCategory] = useState("general");
   const [local, setLocality] = useState("us");
 
-  const apiKey = process.env.REACT_APP_API_KEY;
-
   useEffect(() => {
   const fetchNews = async () => {
+    const apiKey = process.env.REACT_APP_API_KEY;
     const response = await fetch(
       `https://api.thenewsapi.com/v1/news/top?api_token=${apiKey}&locale=${local}&limit=3&categories=${category}`
     )
